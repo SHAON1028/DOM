@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitDeleteBtn</title>
+</head>
+<body>
+    <h1 id="title">My Secret Info</h1>
+    <input id="input-field" type="text" placeholder="Please type  'delete'">
+    <button id="btn-delete" disabled >Delete</button>
+    <script>
+       //delete type korle enable hobe so eta ekta event on input field
+       document.getElementById('input-field').addEventListener('keyup',function(event){
+            //vitorer text nite hobe so
+            const text = event.target.value
+            //delete btn er attribute access 
+            const deleteButton = document.getElementById('btn-delete')
+            if(text==='delete'){
+                deleteButton.removeAttribute('disabled')
+            }
+            else{
+                deleteButton.setAttribute('disabled',true)
+            }
+       })
+        document.body.style.backgroundColor = 'red'
+        document.getElementById('title').style.color = 'yellow'
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            // console.log('OK');
+            const hide =document.getElementById('title')
+            hide.style.display = 'none'
+            const hide1 = document.getElementById('input-field')
+            hide1.value = ''
+        })
+    </script>
+</body>
+</html>
