@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1 id="car-title">Sports Cars</h1>
+    <button onclick="Speed()">Speed</button>
+    <!-- event button -->
+   
+    <button id="car-title2">Fast</button>
+<br>
+<p id="car-name">Lamborgini Car</p>
+<input  id = "input-field" type="text">
+<button id="update-btn">Update</button>
+
+
+    <script>
+        function Speed(){
+            const changeTitle = document.getElementById('car-title')
+            changeTitle.innerText   = 'Tesla Sports Car by Onclick'
+            
+            document.body.style.backgroundColor = 'blue'
+        }
+
+        //event
+
+        document.getElementById('car-title2').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'red'
+            const changeTitle1 = document.getElementById('car-title')
+            changeTitle1.innerText = 'BMW Sports Car by Event'
+           
+        })
+        document.getElementById('update-btn').addEventListener('click',function(){
+            const carName = document.getElementById('car-name')
+            const inputValue = document.getElementById('input-field')
+            const text = inputValue.value
+            carName.innerText = text;
+            text.value('')
+    })
+
+
+        // document.getElementById('update-btn').addEventListener('click',function(){
+        //     const p = document.getElementById('update-carname')
+        //     const inputField = document.getElementById('input-field')
+        //     const inputValue = inputField.value
+        //     p.innerText  = inputValue;
+        //     inputValue.value('')
+        // })
+            </script>
+</body>
+</html>

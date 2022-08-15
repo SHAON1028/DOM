@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+<body>
+    <h1>Please add your Comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque consectetur exercitationem quidem laudantium, eligendi dicta tenetur suscipit velit aut voluptas minus odit ipsam hic. Dignissimos cumque voluptatem mollitia iure!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque consectetur exercitationem quidem laudantium, eligendi dicta tenetur suscipit velit aut voluptas minus odit ipsam hic. Dignissimos cumque voluptatem mollitia iure!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque consectetur exercitationem quidem laudantium, eligendi dicta tenetur suscipit velit aut voluptas minus odit ipsam hic. Dignissimos cumque voluptatem mollitia iure!</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <script>
+        document.body.style.backgroundColor ='yellowgreen'
+
+        //step1:Add EventListener on button
+        //step2:Get the comment Inside text area
+        document.getElementById('btn-post').addEventListener('click',function(){
+            const commnetArea = document.getElementById('new-comment')
+            const commentValue = commnetArea.value
+            //step3:
+                //1. j tag a add korbo tar id newa
+                //2.p tag a rakhbo tai p tag create
+                //3.p tag a innerText add
+                //4.p tag ta ke main a appenChild Korbo
+            const commentContainer = document.getElementById('comment-container')
+            const p = document.createElement('p')
+            p.innerText = commentValue
+            commentContainer.appendChild(p)
+            commnetArea.value=('')
+            
+        })
+    </script>
+</body>
+</html>

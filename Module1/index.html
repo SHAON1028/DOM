@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <style>
+    #sports-title {
+      color: red;
+    }
+
+    #car-title {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main-content">
+    <section class="sports-container">
+      <h1 id="sports-title">Sports Category</h1>
+      <p>Watch the best live coverage of your favourite sports: Football, Golf, Rugby, Cricket, F1, Boxing, NFL, NBA,
+        plus the latest sports news, transfers & scores.
+      </p>
+      <ul>
+        <li class="sports-name">Cricket</li>
+        <li class="sports-name">Golf</li>
+        <li class="sports-name">Football</li>
+      </ul>
+    </section>
+
+    <section class="car-container">
+      <h1 id="car-title" class="car-class">Car Company</h1>
+      <ul>
+        <li class="car-name">BMW</li>
+        <li class="car-name">Tesla</li>
+        <li class="car-name">Ferrari</li>
+      </ul>
+    </section>
+
+    <section id="icecream-container"class="text-center">
+      <h1 id="icecream-title" class="iceText"> I love Ice Cream</h1>
+      <ul id="icename">
+        <li class="icecream-name">Kheer</li>
+        <li class="icecream-name">Nababi Mithai</li>
+        <li class="icecream-name">Vanila</li>
+      </ul>
+    </section>
+    //order maintain korte hobe
+    <script src="/Js/app.js"></script>
+    <script src="/Js/append.js"></script>
+    <script src="/Js/styleinJs.js"></script>
+    
+
+    <script>
+      //getElementsByClassName
+      const sportsName = document.getElementsByClassName('sports-name')
+      // for(const name of sportsName)
+      // console.log(name.innerText);
+      //querySelectorAll obossoi id te # r class er Dot dite hobe
+
+      const carName = document.querySelectorAll('.car-name');
+      // for(const carLi of carName)
+      //  console.log(carLi.innerText);
+
+
+    </script>
+  </main>
+</body>
+
+</html>
